@@ -1,38 +1,27 @@
 <?php
 require_once'readline.php';
-function checkNum($userNum, $newNum){
-	$arr['bull'] = 0;
-	$arr['cow'] = 0;
-	for($i = 0; $i <4; $i++){
-		if ($newNum[$i] == $userNum[$i]){
-			$arr['bull']++;
-		} else if (strpos($userNum, $newNum[$i])!==false){
-			$arr['cow']++;
-		}
-	}
-	return $arr;
-} 
-$firstUser = readline('Èãðà÷ 1 âúâåäè 4 öèôðåíî ÷èñëî: ');
+requare_once'function.php'; 
+$firstUser = readline('ÃˆÃ£Ã°Ã Ã· 1 Ã¢ÃºÃ¢Ã¥Ã¤Ã¨ 4 Ã¶Ã¨Ã´Ã°Ã¥Ã­Ã® Ã·Ã¨Ã±Ã«Ã®: ');
 echo str_repeat(PHP_EOL, 30);
-$secondUser = readline('Èãðà÷ 2 âúâåäè 4 öèôðåíî ÷èñëî: ');
+$secondUser = readline('ÃˆÃ£Ã°Ã Ã· 2 Ã¢ÃºÃ¢Ã¥Ã¤Ã¨ 4 Ã¶Ã¨Ã´Ã°Ã¥Ã­Ã® Ã·Ã¨Ã±Ã«Ã®: ');
 echo str_repeat(PHP_EOL, 30);
 
 while(true){
-	echo str_repeat('-', 30) , PHP_EOL , '---------- Èãðà÷ 1: ----------', PHP_EOL;
-	$firstNum = readline('Âúâåäè ïðåäïîëàãàåìî ÷èñëî:');
+	echo str_repeat('-', 30) , PHP_EOL , '---------- ÃˆÃ£Ã°Ã Ã· 1: ----------', PHP_EOL;
+	$firstNum = readline('Ã‚ÃºÃ¢Ã¥Ã¤Ã¨ Ã¯Ã°Ã¥Ã¤Ã¯Ã®Ã«Ã Ã£Ã Ã¥Ã¬Ã® Ã·Ã¨Ã±Ã«Ã®:');
 	$arr = checkNum($secondUser, $firstNum);
-	echo 'Áèêîâå:', $arr['bull'], PHP_EOL, 'Êðàâè:', $arr['cow'], PHP_EOL;
+	echo 'ÃÃ¨ÃªÃ®Ã¢Ã¥:', $arr['bull'], PHP_EOL, 'ÃŠÃ°Ã Ã¢Ã¨:', $arr['cow'], PHP_EOL;
 	if($arr['bull'] == 4){
-		echo 'ÏÎÁÅÄÈÒÅË!';
+		echo 'ÃÃŽÃÃ…Ã„ÃˆÃ’Ã…Ã‹!';
 		break;
 	}
 // Second gamer
-	echo str_repeat('-', 30) , PHP_EOL , '---------- Èãðà÷ 2: ----------', PHP_EOL;
-	$secondNum = readline('Âúâåäè ïðåäïîëàãàåìî ÷èñëî:');
+	echo str_repeat('-', 30) , PHP_EOL , '---------- ÃˆÃ£Ã°Ã Ã· 2: ----------', PHP_EOL;
+	$secondNum = readline('Ã‚ÃºÃ¢Ã¥Ã¤Ã¨ Ã¯Ã°Ã¥Ã¤Ã¯Ã®Ã«Ã Ã£Ã Ã¥Ã¬Ã® Ã·Ã¨Ã±Ã«Ã®:');
 	$arr = checkNum($firstUser, $secondNum);
-	echo 'Áèêîâå:', $arr['bull'], PHP_EOL, 'Êðàâè:', $arr['cow'], PHP_EOL;
+	echo 'ÃÃ¨ÃªÃ®Ã¢Ã¥:', $arr['bull'], PHP_EOL, 'ÃŠÃ°Ã Ã¢Ã¨:', $arr['cow'], PHP_EOL;
 	if($arr['bull'] == 4){
-		echo 'ÏÎÁÅÄÈÒÅË!';
+		echo 'ÃÃŽÃÃ…Ã„ÃˆÃ’Ã…Ã‹!';
 		break;
 	}
 }

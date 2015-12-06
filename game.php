@@ -1,6 +1,6 @@
 <?php
 require_once'readline.php';
-requare_once'function.php'; 
+require_once'function.php'; 
 $firstUser = readline('Èãðà÷ 1 âúâåäè 4 öèôðåíî ÷èñëî: ');
 echo str_repeat(PHP_EOL, 30);
 $secondUser = readline('Èãðà÷ 2 âúâåäè 4 öèôðåíî ÷èñëî: ');
